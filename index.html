@@ -15,6 +15,9 @@
     <!-- bootstrap-icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- My CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -55,7 +58,7 @@
     <section class="jumbotron text-center">
         <img src="assets/image/rdhn.png" class="rounded-circle img-thumbnail" alt="Radhian Sobarna" width="200">
         <h1 class="display-4">Radhian Sobarna</h1>
-        <p class="lead">Web Programmer</p>
+        <p class="lead">&nbsp;</p>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#fff" fill-opacity="1"
                 d="M0,64L60,106.7C120,149,240,235,360,245.3C480,256,600,192,720,149.3C840,107,960,85,1080,74.7C1200,64,1320,64,1380,64L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
@@ -75,11 +78,13 @@
             </div>
             <div class="row justify-content-center fs-5 text-center">
                 <div class="col-md-4">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum magnam aperiam nulla
+                    <p data-aos="fade-right" data-aos-duration="500">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Laborum magnam aperiam nulla
                         doloribus tempora veritatis reiciendis itaque, quas fugit similique.</p>
                 </div>
                 <div class="col-md-4">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quo maiores, eum fugit
+                    <p data-aos="fade-left" data-aos-duration="500">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Esse quo maiores, eum fugit
                         saepe tempore architecto quasi odit quod, quibusdam perferendis placeat corporis fuga velit.</p>
                 </div>
             </div>
@@ -103,7 +108,7 @@
 
             <div class="row justify-content-center">
                 <div class="col-md-4 mb-3">
-                    <div class="card">
+                    <div class="card" data-aos="zoom-in" data-aos-duration="300">
                         <img src="assets/projects/1.jpg" class="card-img-top" alt="project1">
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
@@ -114,7 +119,7 @@
                 </div>
 
                 <div class="col-md-4 mb-3">
-                    <div class="card">
+                    <div class="card" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="300">
                         <img src="assets/projects/2.jpg" class="card-img-top" alt="project2">
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
@@ -125,7 +130,7 @@
                 </div>
 
                 <div class="col-md-4 mb-3">
-                    <div class="card">
+                    <div class="card" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="600">
                         <img src="assets/projects/3.jpg" class="card-img-top" alt="project3">
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
@@ -136,7 +141,7 @@
                 </div>
 
                 <div class="col-md-4 mb-3">
-                    <div class="card">
+                    <div class="card" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="900">
                         <img src="assets/projects/4.jpg" class="card-img-top" alt="project4">
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
@@ -147,7 +152,7 @@
                 </div>
 
                 <div class="col-md-4 mb-3">
-                    <div class="card">
+                    <div class="card" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="1200">
                         <img src="assets/projects/5.jpg" class="card-img-top" alt="project5">
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
@@ -188,22 +193,24 @@
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                     <form name="radhian-contact-form">
-                        <div class="mb-3">
+                        <div class="mb-3" data-aos="zoom-in-up" data-aos-duration="300">
                             <label for="name" class="form-label">Nama Lengkap</label>
                             <input type="text" class="form-control" id="name" aria-describedby="name" name="nama"
                                 required>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3" data-aos="zoom-in-up" data-aos-duration="300" data-aos-delay="350">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" class="form-control" id="email" aria-describedby="email" name="email"
                                 required>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3" data-aos="zoom-in-up" data-aos-duration="300" data-aos-delay="400">
                             <label for="pesan" class="form-label">Pesan</label>
                             <textarea class="form-control" id="pesan" rows="3" name="pesan" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-success btn-kirim mb-3">Kirim</button>
-                        <button class="btn btn-success btn-loading d-none mb-3" type="button" disabled>
+                        <button type="submit" class="btn btn-success btn-kirim mb-3" data-aos="zoom-in-up"
+                            data-aos-duration="300" data-aos-delay="450">Kirim</button>
+                        <button class="btn btn-success btn-loading d-none mb-3" data-aos="zoom-in-up"
+                            data-aos-duration="300" data-aos-delay="450" type="button" disabled>
                             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                             Loading...
                         </button>
@@ -220,7 +227,7 @@
     <!-- akhir contact -->
 
     <!-- Footer -->
-    <footer class="bg-primary text-white text-center pb-5">
+    <footer class="bg-primary text-white text-center pb-3">
         <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="http://instagram.com"
                 class="text-white fw-bold" target="_blank" rel="noopener noreferrer">Radhian Sobarna</a></p>
     </footer>
@@ -230,6 +237,22 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
         crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/TextPlugin.min.js"></script>
+    <script>
+        gsap.registerPlugin(TextPlugin);
+        gsap.from('.jumbotron img', { duration: 0.8, y: '-100%', opacity: 0, ease: 'bounce' });
+        gsap.from('.jumbotron h1', { duration: 0.8, delay: 1, opacity: 0 });
+        gsap.to('.lead', { duration: 0.6, delay: 1.6, text: 'Web Developer' });
+
+    </script>
+
+    <script>
+        AOS.init();
+    </script>
 
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxVoVlcwKbpHIAcuqz345e0tXOTnQKOKW4YZEygHwehWrCezo17Vqpccw33ZutAEIHNoQ/exec';
