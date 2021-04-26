@@ -179,20 +179,34 @@
 
             <div class="row justify-content-center">
                 <div class="col-md-6">
-                    <form>
+                    <div class="alert alert-success alert-submited alert-dismissible fade show d-none" role="alert">
+                        <strong>Terimakasih!</strong> Pesan anda sudah kami terima.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <div class="alert alert-danger alert-fail alert-dismissible fade show d-none" role="alert">
+                        <strong>Ups!</strong> pesan anda tidak dapat kami terima.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <form name="radhian-contact-form">
                         <div class="mb-3">
-                            <label for="name" class="form-label">Email address</label>
-                            <input type="text" class="form-control" id="name" aria-describedby="name">
+                            <label for="name" class="form-label">Nama Lengkap</label>
+                            <input type="text" class="form-control" id="name" aria-describedby="name" name="nama"
+                                required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" aria-describedby="email">
+                            <input type="email" class="form-control" id="email" aria-describedby="email" name="email"
+                                required>
                         </div>
                         <div class="mb-3">
                             <label for="pesan" class="form-label">Pesan</label>
-                            <textarea class="form-control" id="pesan" rows="3"></textarea>
+                            <textarea class="form-control" id="pesan" rows="3" name="pesan" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-success mb-3">Kirim</button>
+                        <button type="submit" class="btn btn-success btn-kirim mb-3">Kirim</button>
+                        <button class="btn btn-success btn-loading d-none mb-3" type="button" disabled>
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            Loading...
+                        </button>
                     </form>
                 </div>
             </div>
@@ -216,6 +230,42 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
         crossorigin="anonymous"></script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxVoVlcwKbpHIAcuqz345e0tXOTnQKOKW4YZEygHwehWrCezo17Vqpccw33ZutAEIHNoQ/exec';
+        const form = document.forms['radhian-contact-form'];
+        const btnKirim = document.querySelector('.btn-kirim');
+        const btnLoading = document.querySelector('.btn-loading');
+        const alertSuccess = document.querySelector('.alert-submited');
+        const alertFail = document.querySelector('.alert-fail');
+
+        //ketika tombol submit di klik
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            //tampilkan tombol loading, hilangkan tombol kirim
+            btnLoading.classList.toggle('d-none');
+            btnKirim.classList.toggle('d-none');
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    //tampilkan tombol kirim, hilangkan tombol loading
+                    btnLoading.classList.toggle('d-none');
+                    btnKirim.classList.toggle('d-none');
+                    //tampilkan alert
+                    alertSuccess.classList.toggle('d-none');
+                    //reset form
+                    form.reset();
+                    console.log('Success!', response);
+                })
+                .catch(error => {
+                    //tampilkan tombol kirim, hilangkan tombol loading
+                    btnLoading.classList.toggle('d-none');
+                    btnKirim.classList.toggle('d-none');
+                    //tampilkan alert
+                    alertFail.classList.toggle('d-none');
+                    console.error('Error!', error.message);
+                });
+        });
+    </script>
 
 </body>
 
