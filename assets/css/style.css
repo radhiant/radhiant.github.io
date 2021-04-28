@@ -17,6 +17,11 @@ body {
   background-color: #e2edff;
 }
 
+.hovered {
+  cursor: pointer;
+  transition: 300ms;
+}
+
 section {
-  padding-top: 5rem;
+  padding-top: 6rem;
 }
