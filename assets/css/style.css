@@ -29,3 +29,7 @@ section {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.indicator-p {
+  transform: translateY(50px);
+}
