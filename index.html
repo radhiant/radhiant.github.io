@@ -28,8 +28,28 @@
 
 <body id="home" data-spy="scroll" data-target=".navbar" data-bs-offset="0">
 
+    <!-- navbar -->
+    <nav class="navbar-container">
+        <div class="navbar-logo">
+            <h3><a href="#">Radhian Sobarna</a></h3>
+        </div>
+        <div class="navbar-box">
+            <ul class="navbar-list">
+                <li><a href="#home"><i class="bi bi-house"></i> Home</a></li>
+                <li><a href="#about"><i class="bi bi-person"></i> About</a></li>
+                <li><a href="#skills"><i class="bi bi-clipboard-data"></i> Skill</a></li>
+                <li><a href="#projects"><i class="bi bi-diagram-2-fill"></i> Project</a></li>
+                <li><a href="#contact"><i class="bi bi-telephone"></i> Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-toggle">
+            <span></span>
+        </div>
+    </nav>
+    <!-- akhir navbar -->
+
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm fixed-top">
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">Radhian Sobarna</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -56,7 +76,7 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav> -->
     <!-- Akhir navbar -->
 
     <!-- Jumbotron -->
@@ -674,6 +694,13 @@
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+
+        const navBox = document.querySelector('.navbar-box');
+        const navButton = document.querySelector('.navbar-toggle');
+        navButton.addEventListener('click', function () {
+            this.classList.toggle('active');
+            navBox.classList.toggle('active');
         });
     </script>
 
