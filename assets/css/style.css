@@ -57,7 +57,6 @@ section {
   border-radius: 10px;
 }
 .navbar-container .navbar-logo h3 a {
-  font-family: "Poppins";
   font-weight: bold;
   color: #fff;
   text-decoration: none;
@@ -87,7 +86,6 @@ section {
 .navbar-container .navbar-box .navbar-list li a {
   color: #fff;
   text-decoration: none;
-  font-family: "Poppins";
   font-weight: 400;
   letter-spacing: 0.3px;
   transition: 0.5s;
