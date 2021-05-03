@@ -138,6 +138,8 @@ section {
     text-align: left;
     width: 100%;
     padding: 15px 30px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
   }
   .navbar-container .navbar-box .navbar-list li a {
     color: #fff;
