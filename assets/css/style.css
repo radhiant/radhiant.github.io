@@ -81,7 +81,7 @@ section {
   overflow: hidden;
   transition: 0.5s;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 8px;
 }
 .navbar-container .navbar-box .navbar-list li a {
   color: #fff;
@@ -124,8 +124,7 @@ section {
     text-align: left;
     width: 100%;
     padding: 15px 30px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    transform: translateX(-15px);
   }
   .navbar-container .navbar-box .navbar-list li a {
     color: #fff;
