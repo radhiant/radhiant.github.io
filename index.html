@@ -20,6 +20,7 @@
 
     <!-- My CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
 
 
     <title>Radhian Sobarna</title>
@@ -29,7 +30,7 @@
 <body id="home" data-spy="scroll" data-target=".navbar" data-bs-offset="0">
 
     <!-- navbar -->
-    <nav class="navbar-container">
+    <nav class="navbar-container" id="navbar">
         <div class="navbar-logo">
             <h3><a href="#">Radhian Sobarna</a></h3>
         </div>
@@ -642,77 +643,11 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/TextPlugin.min.js"></script>
-
-
-    <script>
-        gsap.registerPlugin(TextPlugin);
-
-        gsap.from('.jumbotron img', { duration: 0.8, y: '-100%', opacity: 0, ease: 'bounce' });
-        gsap.from('.jumbotron h1', { duration: 0.8, delay: 1, opacity: 0 });
-        gsap.to('.lead', { duration: 0.6, delay: 1.6, text: 'Web Developer' });
-
-    </script>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script>
-        $("html, body").animate({ scrollTop: 0 }, 0);
-        var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-            target: '.navbar'
-        });
-
-        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-            return new bootstrap.Tooltip(tooltipTriggerEl)
-        });
-
-        const navBox = document.querySelector('.navbar-box');
-        const navButton = document.querySelector('.navbar-toggle');
-        navButton.addEventListener('click', function () {
-            this.classList.toggle('active');
-            navBox.classList.toggle('active');
-        });
-    </script>
-
-    <script>
-        AOS.init();
-    </script>
-
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxVoVlcwKbpHIAcuqz345e0tXOTnQKOKW4YZEygHwehWrCezo17Vqpccw33ZutAEIHNoQ/exec';
-        const form = document.forms['radhian-contact-form'];
-        const btnKirim = document.querySelector('.btn-kirim');
-        const btnLoading = document.querySelector('.btn-loading');
-        const alertSuccess = document.querySelector('.alert-submited');
-        const alertFail = document.querySelector('.alert-fail');
-
-        //ketika tombol submit di klik
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            //tampilkan tombol loading, hilangkan tombol kirim
-            btnLoading.classList.toggle('d-none');
-            btnKirim.classList.toggle('d-none');
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    //tampilkan tombol kirim, hilangkan tombol loading
-                    btnLoading.classList.toggle('d-none');
-                    btnKirim.classList.toggle('d-none');
-                    //tampilkan alert
-                    alertSuccess.classList.toggle('d-none');
-                    //reset form
-                    form.reset();
-                    console.log('Success!', response);
-                })
-                .catch(error => {
-                    //tampilkan tombol kirim, hilangkan tombol loading
-                    btnLoading.classList.toggle('d-none');
-                    btnKirim.classList.toggle('d-none');
-                    //tampilkan alert
-                    alertFail.classList.toggle('d-none');
-                    console.error('Error!', error.message);
-                });
-        });
-    </script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/googlesheet.js"></script>
+    <script src="assets/js/onscroll.js"></script>
 
 </body>
 
