@@ -32,3 +32,10 @@ section {
   right: 32px;
   bottom: 32px;
 }
+
+@media screen and (max-width: 768px) {
+  .btn-up {
+    right: 16px;
+    bottom: 16px;
+  }
+}
