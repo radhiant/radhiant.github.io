@@ -25,3 +25,10 @@ section {
 .indicator-p {
   transform: translateY(50px);
 }
+
+.btn-up {
+  z-index: 9999;
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+}
