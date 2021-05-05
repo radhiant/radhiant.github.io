@@ -30,11 +30,23 @@ section {
   z-index: 9999;
   position: fixed;
   right: 32px;
+  bottom: 80px;
+}
+
+.btn-full {
+  z-index: 9999;
+  position: fixed;
+  right: 32px;
   bottom: 32px;
 }
 
 @media screen and (max-width: 768px) {
   .btn-up {
+    right: 16px;
+    bottom: 64px;
+  }
+
+  .btn-full {
     right: 16px;
     bottom: 16px;
   }
