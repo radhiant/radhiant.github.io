@@ -14,18 +14,6 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl)
 });
 
-const navBox = document.querySelector('.navbar-box');
-const navButton = document.querySelector('.navbar-toggle');
-
-navButton.addEventListener('click', function () {
-    this.classList.toggle('active');
-    navBox.classList.toggle('active');
-});
-
-function navHide() {
-    navBox.classList.toggle('active');
-    navButton.classList.toggle('active');
-}
 
 AOS.init();
 

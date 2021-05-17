@@ -64,6 +64,15 @@
 .navbar-container .navbar-box .navbar-list li:hover {
   background-color: #fff;
 }
+
+.navbar-container .navbar-box .navbar-list .active{
+  background-color: #fff;
+}
+
+.navbar-container .navbar-box .navbar-list .active a{
+  color:#0d6efd;
+}
+
 .navbar-container .navbar-box .navbar-list li:hover a {
   color: #0d6efd;
 }
