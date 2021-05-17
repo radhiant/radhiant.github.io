@@ -11,4 +11,8 @@ function scrollFunction() {
         navbar.classList.remove("shadow");
         btnup.fadeOut("slow", "linear");
     }
+
 }
+
+
+

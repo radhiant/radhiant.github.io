@@ -14,6 +14,31 @@ navButton.addEventListener('click', function () {
     navBox.classList.toggle('active');
 });
 
+$(window).on('load resize scroll', function () {
+    var delta = 450;
+    $('html section').each(function (i) {
+        var rect = this.getBoundingClientRect();
+        if (rect.top >= 0 && rect.top < window.innerHeight - delta) {
+            if (i == 0) {
+                focusHome();
+            } else if (i == 1) {
+                focusAbout();
+            } else if (i == 2) {
+                focusSkill();
+            } else if (i == 3) {
+                focusProjek();
+            } else if (i == 4) {
+                focusContact();
+            } else {
+                activeNull();
+            }
+            return;
+        }
+    });
+});
+
+
+
 function navHide(menuActive) {
     navBox.classList.toggle('active');
     navButton.classList.toggle('active');
