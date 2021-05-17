@@ -45,8 +45,19 @@ var failMessage = document.getElementById("failMessage");
 //footer
 var footerText = document.getElementById("footerText");
 
+function checkRegion() {
+    $.get("https://ipinfo.io", function (response) {
+
+        if (response.country == 'ID') {
+            idLeanguage();
+        } else {
+            engLeanguage();
+        }
+    }, "jsonp");
+}
+
 window.onload = function () {
-    engLeanguage();
+    checkRegion();
 }
 
 btnEng.onclick = function () {
