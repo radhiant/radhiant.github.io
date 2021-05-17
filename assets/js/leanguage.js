@@ -2,6 +2,7 @@
 var btnEng = document.getElementById('btnEng');
 var btnId = document.getElementById('btnId');
 var imgLng = document.getElementById('imgLng');
+var linkcv = document.getElementById('linkcv');
 
 // menu Navbar
 var homeMenuText = document.getElementById("homeMenuText");
@@ -70,6 +71,10 @@ btnId.onclick = function () {
 
 function engLeanguage() {
     imgLng.src = "assets/image/eng.png";
+
+    linkcv.innerHTML = '<i class="bi bi-download me-1"></i> Download CV';
+    linkcv.setAttribute("href", "assets/image/radhian_CV_ENG.pdf");
+
     homeMenuText.innerHTML = '<i class="bi bi-house"></i> Home';
     aboutMenuText.innerHTML = '<i class="bi bi-person"></i> About';
     skillMenuText.innerHTML = '<i class="bi bi-clipboard-data"></i> Skill';
@@ -77,8 +82,8 @@ function engLeanguage() {
     contactMenuText.innerHTML = '<i class="bi bi-telephone"></i> Contact';
 
     headingAbout.innerHTML = "About Me";
-    about1.innerHTML = "My name is Radhian Sobarna, I live in Indonesia, I started to dive into the world of programming since high school";
-    about2.innerHTML = "Now I have 3+ years of experience making several web-based information systems for companies and non-companies";
+    about1.innerHTML = "My name is Radhian Sobarna and I am 21 years old. I am an Indonesian citizen, I started to dive into the programming world since high school.";
+    about2.innerHTML = "I have 3+ years of experience making several information systems, both for companies and non-companies.";
 
     headingSkill.innerHTML = "My Skills";
 
@@ -116,6 +121,10 @@ function engLeanguage() {
 
 function idLeanguage() {
     imgLng.src = "assets/image/indonesia.png";
+
+    linkcv.innerHTML = '<i class="bi bi-download me-1"></i> Unduh CV';
+    linkcv.setAttribute("href", "assets/image/radhian_CV_ID.pdf");
+
     homeMenuText.innerHTML = '<i class="bi bi-house"></i> Utama';
     aboutMenuText.innerHTML = '<i class="bi bi-person"></i> Tentang';
     skillMenuText.innerHTML = '<i class="bi bi-clipboard-data"></i> Kemampuan';
@@ -123,8 +132,8 @@ function idLeanguage() {
     contactMenuText.innerHTML = '<i class="bi bi-telephone"></i> Kontak';
 
     headingAbout.innerHTML = "Tentang Saya";
-    about1.innerHTML = "Nama saya Radhian Sobarna, saya tinggal di Indonesia, saya mulai terjun ke dunia pemrograman sejak SMK";
-    about2.innerHTML = "Sekarang saya memiliki pengalaman 3+ tahun membuat beberapa sistem informasi berbasis web untuk perusahaan dan non-perusahaan";
+    about1.innerHTML = "Nama saya Radhian Sobarna berusia 21 tahun. Saya warga negara Indonesia, saya mulai terjun ke dunia pemrograman sejak SMK.";
+    about2.innerHTML = "Saya memiliki pengalaman 3+ tahun membuat beberapa Sistem informasi, baik untuk perusahaan maupun non perusahaan.";
 
     headingSkill.innerHTML = "Kemampuan Saya";
 
