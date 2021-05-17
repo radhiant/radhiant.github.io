@@ -42,6 +42,19 @@
             class="bi bi-fullscreen-exit"></i></button>
     <!-- end Fullscreen button -->
 
+    <!-- Leanguage -->
+    <div class="dropdown btn-leanguage">
+        <button type="button" class="btn btn-dark p-1 dropdown-toggle" id="dropdownMenuOffset" data-bs-toggle="dropdown"
+            data-bs-offset="0,20">
+            <img src="assets/image/eng.png" width="32px" id="imgLng">
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+            <a class="dropdown-item" href="#" id="btnEng">English</a>
+            <a class="dropdown-item" href="#" id="btnId">Indonesia</a>
+        </div>
+    </div>
+    <!-- End leanguage -->
+
     <!-- navbar -->
     <nav class="navbar-container" id="navbar">
         <div class="navbar-logo">
@@ -49,12 +62,13 @@
         </div>
         <div class="navbar-box">
             <ul class="navbar-list">
-                <li onclick="navHide()"><a href="#home"><i class="bi bi-house"></i> Home</a></li>
-                <li onclick="navHide()"><a href="#about"><i class="bi bi-person"></i> About</a></li>
-                <li onclick="navHide()"><a href="#skills"><i class="bi bi-clipboard-data"></i> Skill</a></li>
-                <li onclick="navHide()"><a href="#projects"><i class="bi bi-diagram-2-fill"></i> Project</a></li>
-                <li onclick="navHide()"><a href="#contact"><i class="bi bi-telephone"></i> Contact</a></li>
+                <li onclick="navHide()"><a href="#home" id="homeMenuText"></a></li>
+                <li onclick="navHide()"><a href="#about" id="aboutMenuText"></a></li>
+                <li onclick="navHide()"><a href="#skills" id="skillMenuText"></a></li>
+                <li onclick="navHide()"><a href="#projects" id="projectMenuText"></a></li>
+                <li onclick="navHide()"><a href="#contact" id="contactMenuText"></a></li>
             </ul>
+
         </div>
         <div class="navbar-toggle">
             <span></span>
@@ -109,18 +123,15 @@
         <div class="container">
             <div class="row text-center mb-4">
                 <div class="col">
-                    <h2>About Me</h2>
+                    <h2 id="headingAbout"></h2>
                 </div>
             </div>
             <div class="row justify-content-center fs-5 text-center">
                 <div class="col-md-4 mb-4">
-                    <p data-aos="fade-right" data-aos-duration="500">My name is Radhian Sobarna, I live in Indonesia, I
-                        started to dive into the world of programming since high school</p>
+                    <p data-aos="fade-right" data-aos-duration="500" id="about1"></p>
                 </div>
                 <div class="col-md-4">
-                    <p data-aos="fade-left" data-aos-duration="500">Now I have 3+ years of experience making several
-                        web-based information systems for companies and non-companies
-                    </p>
+                    <p data-aos="fade-left" data-aos-duration="500" id="about2"></p>
                 </div>
             </div>
         </div>
@@ -141,7 +152,7 @@
         <div class="container">
             <div class="row text-center mb-4">
                 <div class="col">
-                    <h2>My Skills</h2>
+                    <h2 id="headingSkill"></h2>
                 </div>
             </div>
             <div class="row text-center mb-4">
@@ -197,7 +208,7 @@
         <div class="container">
             <div class="row text-center mb-4">
                 <div class="col-12 text-white mb-4">
-                    <h2>My Projects</h2>
+                    <h2 id="headingProject"></h2>
                 </div>
                 <div class="col-12" data-aos="zoom-in" data-aos-duration="300" data-aos-once="true">
                     <button class="btn btn-light" id="btnAll">All</button>
@@ -213,9 +224,8 @@
                         <div class="card-box">
                             <div class="text-center">
 
-                                <a href="https://radhiant.github.io/landing_page_1/" class="btn btn-dark mt-2"
-                                    target="_blank"><i class="bi bi-globe"></i>
-                                    View Site</a>
+                                <a href="https://radhiant.github.io/landing_page_1/" class="btn btn-dark mt-2 viewSite"
+                                    target="_blank"></a>
                             </div>
                         </div>
                         <img src="assets/projects/lp1.PNG" class="card-img-top" alt="project1">
@@ -228,9 +238,7 @@
                                 <img src="assets/skills/reactjs100x100.png" class="me-1" alt="rjs" width="20px"
                                     height="20px">
                             </div>
-                            <p class="card-text">Convert design XD to Website using React JS
-                                <br />&nbsp;
-                            </p>
+                            <p class="card-text" id="card1"></p>
 
                         </div>
                     </div>
@@ -241,15 +249,11 @@
                         data-aos-once="true">
                         <div class="card-box">
                             <div class="text-center">
-                                <a href="https://youtu.be/L1mIvReFlOc" target="_blank" class="btn btn-danger"><i
-                                        class="bi bi-youtube"></i>
-                                    Demo on
-                                    YouTube</a>
+                                <a href="https://youtu.be/L1mIvReFlOc" target="_blank"
+                                    class="btn btn-danger viewYt"></a>
 
-                                <a href="https://github.com/radhiant/inventoryweb-ci3" class="btn btn-dark mt-2"
-                                    target="_blank"><i class="bi bi-github"></i>
-                                    Detail in
-                                    Github</a>
+                                <a href="https://github.com/radhiant/inventoryweb-ci3"
+                                    class="btn btn-dark mt-2 viewGithub" target="_blank"></a>
                             </div>
                         </div>
                         <img src="assets/projects/inventoryweb.PNG" class="card-img-top" alt="project1">
@@ -265,9 +269,7 @@
                                 <img src="assets/skills/sql100x100.png" class="me-1" alt="sql" width="20px"
                                     height="20px">
                             </div>
-                            <p class="card-text">Web-based <strong>Inventory</strong> Information System
-                                <br />&nbsp;
-                            </p>
+                            <p class="card-text" id="card2"></p>
 
                         </div>
                     </div>
@@ -278,16 +280,11 @@
                         data-aos-once="true">
                         <div class="card-box">
                             <div class="text-center">
-                                <a href="https://youtu.be/Wsn4bbBPLVI" target="_blank" class="btn btn-danger"><i
-                                        class="bi bi-youtube"></i>
-                                    Demo
-                                    on
-                                    YouTube</a>
+                                <a href="https://youtu.be/Wsn4bbBPLVI" target="_blank"
+                                    class="btn btn-danger viewYt"></a>
 
-                                <a href="https://github.com/radhiant/perpusweb-ci3" class="btn btn-dark mt-2"
-                                    target="_blank"><i class="bi bi-github"></i>
-                                    Detail in
-                                    Github</a>
+                                <a href="https://github.com/radhiant/perpusweb-ci3" class="btn btn-dark mt-2 viewGithub"
+                                    target="_blank"></a>
                             </div>
                         </div>
                         <img src="assets/projects/perpusweb.PNG" class="card-img-top" alt="project2">
@@ -303,9 +300,7 @@
                                 <img src="assets/skills/sql100x100.png" class="me-1" alt="sql" width="20px"
                                     height="20px">
                             </div>
-                            <p class="card-text">Web-based <strong>Book Library</strong> Information System
-                                <br />&nbsp;
-                            </p>
+                            <p class="card-text" id="card3"></p>
                         </div>
                     </div>
                 </div>
@@ -315,10 +310,8 @@
                         data-aos-once="true">
                         <div class="card-box">
                             <div class="text-center">
-                                <a href="https://github.com/radhiant/homestay-ci3" class="btn btn-dark mt-2"
-                                    target="_blank"><i class="bi bi-github"></i>
-                                    Detail in
-                                    Github</a>
+                                <a href="https://github.com/radhiant/homestay-ci3" class="btn btn-dark mt-2 viewGithub"
+                                    target="_blank"></a>
                             </div>
                         </div>
                         <img src="assets/projects/HomeStay.PNG" class="card-img-top" alt="project3">
@@ -334,9 +327,7 @@
                                 <img src="assets/skills/sql100x100.png" class="me-1" alt="sql" width="20px"
                                     height="20px">
                             </div>
-                            <p class="card-text">Web-based <strong>Lodging</strong> Information System
-                                <br />&nbsp;
-                            </p>
+                            <p class="card-text" id="card4"></p>
                         </div>
                     </div>
                 </div>
@@ -346,10 +337,8 @@
                         data-aos-once="true">
                         <div class="card-box">
                             <div class="text-center">
-                                <a href="https://github.com/radhiant/" class="btn btn-dark mt-2" target="_blank"><i
-                                        class="bi bi-github"></i>
-                                    Detail in
-                                    Github</a>
+                                <a href="https://github.com/radhiant/" class="btn btn-dark mt-2 viewGithub"
+                                    target="_blank"></a>
                             </div>
                         </div>
                         <img src="assets/projects/SummaryReportBKU.PNG" class="card-img-top" alt="project4">
@@ -365,11 +354,7 @@
                                 <img src="assets/skills/sql100x100.png" class="me-1" alt="sql" width="20px"
                                     height="20px">
                             </div>
-                            <p class="card-text">
-                                <strong>Report</strong> information system web-based <i>PT Bintang
-                                    Komunikasi Utama</i>
-                                office project
-                            </p>
+                            <p class="card-text" id="card5"></p>
                         </div>
                     </div>
                 </div>
@@ -379,10 +364,8 @@
                         data-aos-once="true">
                         <div class="card-box">
                             <div class="text-center">
-                                <a href="https://github.com/radhiant/" class="btn btn-dark mt-2" target="_blank"><i
-                                        class="bi bi-github"></i>
-                                    Detail in
-                                    Github</a>
+                                <a href="https://github.com/radhiant/" class="btn btn-dark mt-2 viewGithub"
+                                    target="_blank"></a>
                             </div>
                         </div>
                         <img src="assets/projects/ArsipDokumen.PNG" class="card-img-top" alt="project5">
@@ -398,11 +381,7 @@
                                 <img src="assets/skills/sql100x100.png" class="me-1" alt="sql" width="20px"
                                     height="20px">
                             </div>
-                            <p class="card-text"><strong>Archiving</strong> information system web-based
-                                <i>PT Bintang
-                                    Komunikasi Utama</i>
-                                office project
-                            </p>
+                            <p class="card-text" id="card6"></p>
                         </div>
                     </div>
                 </div>
@@ -412,10 +391,8 @@
                         data-aos-once="true">
                         <div class="card-box">
                             <div class="text-center">
-                                <a href="https://github.com/radhiant/" class="btn btn-dark mt-2" target="_blank"><i
-                                        class="bi bi-github"></i>
-                                    Detail in
-                                    Github</a>
+                                <a href="https://github.com/radhiant/" class="btn btn-dark mt-2 viewGithub"
+                                    target="_blank"></a>
                             </div>
                         </div>
                         <img src="assets/projects/AsetBarang.PNG" class="card-img-top" alt="project6">
@@ -431,11 +408,7 @@
                                 <img src="assets/skills/sql100x100.png" class="me-1" alt="sql" width="20px"
                                     height="20px">
                             </div>
-                            <p class="card-text"><strong>Property Asset</strong> information system
-                                web-based <i>PT
-                                    Bintang
-                                    Komunikasi Utama</i>
-                                office project</p>
+                            <p class="card-text" id="card7"></p>
                         </div>
                     </div>
                 </div>
@@ -459,40 +432,44 @@
         <div class="container">
             <div class="row text-center mb-4">
                 <div class="col">
-                    <h2>Contact Me</h2>
+                    <h2 id="headingContact"></h2>
                 </div>
             </div>
 
             <div class="row justify-content-center">
                 <div class="col-md-6">
-                    <div class="alert alert-success alert-submited alert-dismissible fade show d-none" role="alert">
+                    <div class="alert alert-success alert-submited alert-dismissible fade show d-none"
+                        id="succesMessage" role="alert">
                         <strong>Thank you!</strong> We have received your message.
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
-                    <div class="alert alert-danger alert-fail alert-dismissible fade show d-none" role="alert">
+                    <div class="alert alert-danger alert-fail alert-dismissible fade show d-none" id="failMessage"
+                        role="alert">
                         <strong>Ups!</strong> We cannot accept your message.
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                     <form name="radhian-contact-form">
                         <div class="mb-3" data-aos="zoom-in-up" data-aos-duration="300">
-                            <label for="name" class="form-label"><i class="bi bi-person-fill"></i> Full Name</label>
+                            <label for="name" class="form-label" id="formName"><i class="bi bi-person-fill"></i> Full
+                                Name</label>
                             <input type="text" class="form-control" id="name" aria-describedby="name" name="nama"
                                 required>
                         </div>
                         <div class="mb-3" data-aos="zoom-in-up" data-aos-duration="300" data-aos-delay="350">
-                            <label for="email" class="form-label"><i class="bi bi-envelope-fill"></i> Email</label>
+                            <label for="email" class="form-label" id="formEmail"><i class="bi bi-envelope-fill"></i>
+                                Email</label>
                             <input type="email" class="form-control" id="email" aria-describedby="email" name="email"
                                 required>
                         </div>
                         <div class="mb-3" data-aos="zoom-in-up" data-aos-duration="300" data-aos-delay="400">
-                            <label for="pesan" class="form-label"><i class="bi bi-chat-dots-fill"></i> Message</label>
+                            <label for="pesan" class="form-label" id="formMessage"><i class="bi bi-chat-dots-fill"></i>
+                                Message</label>
                             <textarea class="form-control" id="pesan" rows="3" name="pesan" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-success btn-kirim mb-3" data-aos="zoom-in-up"
-                            data-aos-duration="300" data-aos-delay="450">Submit <i
-                                class="bi bi-cursor-fill"></i></button>
+                            data-aos-duration="300" data-aos-delay="450" id="btnSubmit"></button>
                         <button class="btn btn-success btn-loading d-none mb-3" data-aos="zoom-in-up"
-                            data-aos-duration="300" data-aos-delay="450" type="button" disabled>
+                            data-aos-duration="300" data-aos-delay="450" type="button" disabled id="btnLoding">
                             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                             Loading...
                         </button>
@@ -509,7 +486,7 @@
     <!-- akhir contact -->
 
     <!-- Footer -->
-    <footer class="bg-primary text-white text-center pb-3">
+    <footer class="bg-primary text-white text-center pb-3" id="footerText">
         <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://github.com/radhiant"
                 class="text-white fw-bold" target="_blank" rel="noopener noreferrer">Radhian Sobarna</a></p>
     </footer>
@@ -530,6 +507,7 @@
     <script src="assets/js/onscroll.js"></script>
     <script src="assets/js/all.js"></script>
     <script src="assets/js/projects.js"></script>
+    <script src="assets/js/leanguage.js"></script>
 </body>
 
 </html>

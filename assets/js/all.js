@@ -5,6 +5,8 @@ var btnCloseF = document.getElementById('btncfull');
 
 btnCloseF.style.display = "none";
 
+
+
 /* View in fullscreen */
 function openFullscreen() {
     if (elem.requestFullscreen) {
@@ -38,3 +40,13 @@ function closeFullscreen() {
         btnOpenF.style.display = "block";
     }
 }
+
+var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+    return new bootstrap.Dropdown(dropdownToggleEl)
+});
+
+
+
+
+
