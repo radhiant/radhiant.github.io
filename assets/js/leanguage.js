@@ -25,6 +25,7 @@ var btnTextAll = document.getElementById("btnAll");
 var viewSite = document.querySelectorAll('.viewSite');
 var viewGithub = document.querySelectorAll(".viewGithub");
 var viewYt = document.querySelectorAll(".viewYt");
+var viewMore = document.querySelectorAll(".viewMore");
 var card1 = document.getElementById("card1");
 var card2 = document.getElementById("card2");
 var card3 = document.getElementById("card3");
@@ -58,8 +59,8 @@ function checkRegion() {
 }
 
 window.onload = function () {
-    // checkRegion();
-    engLeanguage();
+    checkRegion();
+    // engLeanguage();
 
 }
 
@@ -99,6 +100,9 @@ function engLeanguage() {
     });
     viewGithub.forEach(element => {
         element.innerHTML = '<i class="bi bi-github"></i> Detail in Github';
+    });
+    viewMore.forEach(element => {
+        element.innerHTML = '<i class="bi bi-eye-fill"></i> View More';
     });
     card1.innerHTML = "Convert design XD to Website using React JS";
     card2.innerHTML = "Web-based <strong>Inventory</strong> Information System";
@@ -149,6 +153,9 @@ function idLeanguage() {
     });
     viewGithub.forEach(element => {
         element.innerHTML = '<i class="bi bi-github"></i> Selengkapnya di Github';
+    });
+    viewMore.forEach(element => {
+        element.innerHTML = '<i class="bi bi-eye-fill"></i> Lihat lebih banyak';
     });
     card1.innerHTML = "Mengubah desain XD ke Situs web menggunakan React JS";
     card2.innerHTML = "Sistem Informasi <strong>Inventaris</strong> berbasis web";

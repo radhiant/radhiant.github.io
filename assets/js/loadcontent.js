@@ -1,6 +1,12 @@
 var title = document.getElementById("exampleModalLabel");
-title.innerHTML = "Summary Report";
+var content = document.getElementById("contentMore");
 
-function loadSMRreport() {
+
+function loadSMRreport(x) {
+    title.innerHTML = x;
     $("#contentMore").load("projek/summaryreport.html");
+}
+
+function closeContent() {
+    content.innerHTML = "";
 }

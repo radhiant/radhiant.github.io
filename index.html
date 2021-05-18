@@ -43,7 +43,7 @@
     <!-- end Fullscreen button -->
 
     <!-- Leanguage -->
-    <div class="dropdown btn-leanguage">
+    <div class="dropdown btn-leanguage" id="dropdownBtn">
         <button type="button" class="btn btn-dark p-1 dropdown-toggle rounded-circle" id="dropdownMenuOffset"
             data-bs-toggle="dropdown" data-bs-offset="0,20">
             <img src="assets/image/eng.png" width="32px" id="imgLng">
@@ -341,8 +341,8 @@
                         data-aos-once="true">
                         <div class="card-box">
                             <div class="text-center">
-                                <button type="button" class="btn btn-dark mt-2" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal" onclick="loadSMRreport()">Lihat lebih banyak</button>
+                                <button type="button" class="btn btn-dark mt-2 viewMore" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal" onclick="loadSMRreport('Summary Report')"></button>
                             </div>
                         </div>
                         <img src="assets/projects/SummaryReportBKU.PNG" class="card-img-top" alt="project4">
@@ -497,12 +497,14 @@
     <!-- Akhir Footer -->
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel"></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="closeContent()"
+                        aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div id="contentMore"></div>
