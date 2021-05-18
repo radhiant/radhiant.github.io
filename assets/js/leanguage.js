@@ -58,7 +58,9 @@ function checkRegion() {
 }
 
 window.onload = function () {
-    checkRegion();
+    // checkRegion();
+    engLeanguage();
+
 }
 
 btnEng.onclick = function () {

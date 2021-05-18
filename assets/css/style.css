@@ -87,10 +87,19 @@ section {
   transition: 300ms;
 }
 
+.card-box button{
+  display: none;
+  transition: 300ms;
+}
+
 .card-box:hover{
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 .card-box:hover a{
+  display: block;
+}
+
+.card-box:hover button{
   display: block;
 }
