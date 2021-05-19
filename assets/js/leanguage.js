@@ -33,6 +33,7 @@ var card4 = document.getElementById("card4");
 var card5 = document.getElementById("card5");
 var card6 = document.getElementById("card6");
 var card7 = document.getElementById("card7");
+var card8 = document.getElementById("card8");
 
 // Contact
 var headingContact = document.getElementById("headingContact");
@@ -106,11 +107,12 @@ function engLeanguage() {
     });
     card1.innerHTML = "Convert design XD to Website using React JS";
     card2.innerHTML = "Web-based <strong>Inventory</strong> Information System";
-    card3.innerHTML = "Web-based <strong>Book</strong> Library Information System";
+    card3.innerHTML = "Web-based <strong>Book</strong> Library Information System <br> &nbsp;";
     card4.innerHTML = "Web-based <strong>Lodging</strong> Information System <br /> &nbsp;";
     card5.innerHTML = "<strong>Report</strong> information system web-based <i>PT Bintang Komunikasi Utama</i> office project";
     card6.innerHTML = "<strong>Archiving</strong> information system web-based <i>PT Bintang Komunikasi Utama</i> office project";
     card7.innerHTML = "<strong>Property Asset</strong> information system web - based <i> PT Bintang Komunikasi Utama</i> office project";
+    card8.innerHTML = "Convert design XD to Website using React JS";
 
     headingContact.innerHTML = "Contact Me";
     formName.innerHTML = "Full Name";
@@ -159,11 +161,12 @@ function idLeanguage() {
     });
     card1.innerHTML = "Mengubah desain XD ke Situs web menggunakan React JS";
     card2.innerHTML = "Sistem Informasi <strong>Inventaris</strong> berbasis web";
-    card3.innerHTML = "Sistem Informasi <strong>Perpustakaan Buku</strong> Berbasis Web";
+    card3.innerHTML = "Sistem Informasi <strong>Perpustakaan Buku</strong> Berbasis Web <br> &nbsp;";
     card4.innerHTML = "Sistem Informasi <strong>Penginapan</strong> Berbasis Web <br /> &nbsp;";
     card5.innerHTML = "Sistem informasi <strong>Laporan</strong> proyek kantor <i>PT Bintang Komunikasi Utama</i> berbasis web";
     card6.innerHTML = "Sistem informasi <strong>Pengarsipan</strong> proyek kantor <i>PT Bintang Komunikasi Utama</i> berbasis web";
     card7.innerHTML = "Sistem informasi <strong>Aset Properti</strong> proyek kantor <i>PT Bintang Komunikasi Utama</i> berbasis web";
+    card8.innerHTML = "Mengubah desain XD ke Situs web menggunakan React JS";
 
     headingContact.innerHTML = "Kontak Saya";
     formName.innerHTML = "Nama Lengkap";
