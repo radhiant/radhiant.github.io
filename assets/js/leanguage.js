@@ -77,8 +77,8 @@ btnId.onclick = function () {
 function engLeanguage() {
     imgLng.src = "assets/image/eng.png";
 
-    linkcv.innerHTML = '<i class="bi bi-download me-1"></i> Download CV';
-    linkcv.setAttribute("href", "assets/image/radhian_CV_ENG.pdf");
+    linkcv.innerHTML = '<i class="bi bi-download me-1"></i> Download Resume';
+    linkcv.setAttribute("href", "assets/image/radhian_resume_ENG.pdf");
 
     homeMenuText.innerHTML = '<i class="bi bi-house"></i> Home';
     aboutMenuText.innerHTML = '<i class="bi bi-person"></i> About';
@@ -132,8 +132,8 @@ function engLeanguage() {
 function idLeanguage() {
     imgLng.src = "assets/image/indonesia.png";
 
-    linkcv.innerHTML = '<i class="bi bi-download me-1"></i> Unduh CV';
-    linkcv.setAttribute("href", "assets/image/radhian_CV_ID.pdf");
+    linkcv.innerHTML = '<i class="bi bi-download me-1"></i> Unduh Resume';
+    linkcv.setAttribute("href", "assets/image/radhian_resume_ID.pdf");
 
     homeMenuText.innerHTML = '<i class="bi bi-house"></i> Utama';
     aboutMenuText.innerHTML = '<i class="bi bi-person"></i> Tentang';
