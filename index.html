@@ -1,576 +1,471 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#0d6efd" />
 
-    <link rel="icon" href="assets/image/rdhn.ico">
-    <link rel="shortcut icon" href="assets/image/rdhn.ico">
-    <link rel="apple-touch-icon" href="assets/image/rdhn.ico">
+    <link rel="icon" href="assets/image/rdhn.ico" />
+    <link rel="shortcut icon" href="assets/image/rdhn.ico" />
+    <link rel="apple-touch-icon" href="assets/image/rdhn.ico" />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
 
     <!-- bootstrap-icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
 
     <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- My CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/navbar.css">
-
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
 
     <title>Radhian Sobarna</title>
+  </head>
 
-</head>
-
-<body id="home" data-spy="scroll" data-target=".navbar" data-bs-offset="0">
-
+  <body id="home" data-spy="scroll" data-target=".navbar" data-bs-offset="0">
     <!-- Up Button -->
-    <a href="#" class="btn btn-dark btn-up rounded-circle text-center shadow" id="btnup" onclick="onTop()"><i
-            class="bi bi-chevron-up"></i></a>
+    <a href="#" class="btn btn-dark btn-up rounded-circle text-center shadow" id="btnup" onclick="onTop()"><i class="bi bi-chevron-up"></i></a>
     <!-- end upbutton -->
 
     <!-- Fullscreen Button -->
-    <button class="btn btn-dark btn-full text-center rounded-circle shadow" id="btnofull" onclick="openFullscreen()"><i
-            class="bi bi-fullscreen"></i></button>
-    <button class="btn btn-dark btn-full text-center rounded-circle shadow" id="btncfull" onclick="closeFullscreen()"><i
-            class="bi bi-fullscreen-exit"></i></button>
+    <button class="btn btn-dark btn-full text-center rounded-circle shadow" id="btnofull" onclick="openFullscreen()"><i class="bi bi-fullscreen"></i></button>
+    <button class="btn btn-dark btn-full text-center rounded-circle shadow" id="btncfull" onclick="closeFullscreen()"><i class="bi bi-fullscreen-exit"></i></button>
     <!-- end Fullscreen button -->
 
     <!-- Leanguage -->
     <div class="dropdown btn-leanguage" id="dropdownBtn">
-        <button type="button" class="btn btn-dark p-1 dropdown-toggle rounded-circle" id="dropdownMenuOffset"
-            data-bs-toggle="dropdown" data-bs-offset="0,20">
-            <img src="assets/image/eng.png" width="32px" id="imgLng">
-        </button>
-        <div class="dropdown-menu dropdown-menu-dark shadow-lg rounded" aria-labelledby="dropdownMenuOffset">
-            <a class="dropdown-item" href="#" id="btnEng"><img src="assets/image/eng.png" width="32px">
-                English</a>
-            <li>
-                <hr class="dropdown-divider">
-            </li>
-            <a class="dropdown-item" href="#" id="btnId"><img src="assets/image/indonesia.png" width="32px">
-                Indonesia</a>
-        </div>
+      <button type="button" class="btn btn-dark p-1 dropdown-toggle rounded-circle" id="dropdownMenuOffset" data-bs-toggle="dropdown" data-bs-offset="0,20">
+        <img src="assets/image/eng.png" width="32px" id="imgLng" />
+      </button>
+      <div class="dropdown-menu dropdown-menu-dark shadow-lg rounded" aria-labelledby="dropdownMenuOffset">
+        <a class="dropdown-item" href="#" id="btnEng"><img src="assets/image/eng.png" width="32px" /> English</a>
+        <li>
+          <hr class="dropdown-divider" />
+        </li>
+        <a class="dropdown-item" href="#" id="btnId"><img src="assets/image/indonesia.png" width="32px" /> Indonesia</a>
+      </div>
     </div>
     <!-- End leanguage -->
 
     <!-- navbar -->
     <nav class="navbar-container" id="navbar">
-        <div class="navbar-logo">
-            <h3><a href="">Radhian Sobarna</a></h3>
-        </div>
-        <div class="navbar-box">
-            <ul class="navbar-list">
-                <li onclick="navHide('home')" id="menuHome"><a href="#home" id="homeMenuText"></a></li>
-                <li onclick="navHide('about')" id="menuAbout"><a href="#about" id="aboutMenuText"></a></li>
-                <li onclick="navHide('skill')" id="menuSkill"><a href="#skills" id="skillMenuText"></a></li>
-                <li onclick="navHide('projek')" id="menuProjek"><a href="#projects" id="projectMenuText"></a></li>
-                <li onclick="navHide('contact')" id="menuContact"><a href="#contact" id="contactMenuText"></a></li>
-            </ul>
-
-        </div>
-        <div class="navbar-toggle">
-            <span></span>
-        </div>
+      <div class="navbar-logo">
+        <h3><a href="">Radhian Sobarna</a></h3>
+      </div>
+      <div class="navbar-box">
+        <ul class="navbar-list">
+          <li onclick="navHide('home')" id="menuHome"><a href="#home" id="homeMenuText"></a></li>
+          <li onclick="navHide('about')" id="menuAbout"><a href="#about" id="aboutMenuText"></a></li>
+          <li onclick="navHide('skill')" id="menuSkill"><a href="#skills" id="skillMenuText"></a></li>
+          <li onclick="navHide('projek')" id="menuProjek"><a href="#projects" id="projectMenuText"></a></li>
+          <li onclick="navHide('contact')" id="menuContact"><a href="#contact" id="contactMenuText"></a></li>
+        </ul>
+      </div>
+      <div class="navbar-toggle">
+        <span></span>
+      </div>
     </nav>
     <!-- akhir navbar -->
 
     <!-- Jumbotron -->
     <section class="jumbotron text-center text-white">
-        <img src="assets/image/rdhn.png" class="rounded-circle shadow-lg" alt="Radhian Sobarna" width="200">
-        <h1 class="display-4 mt-2 fw-bolder">Radhian Sobarna</h1>
-        <p class="lead">&nbsp;</p>
-        <div class="d-flex justify-content-center">
-            <h3 data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" data-aos="zoom-in"
-                data-aos-duration="300" data-aos-delay="2200">
-                <a href="https://www.facebook.com/radhiantsobarna/" target="_blank" class="link-light me-4 fb">
-                    <i class="bi bi-facebook"></i>
-                </a>
-            </h3>
-            <h3 data-bs-toggle="tooltip" data-bs-placement="top" title="Instagram" data-aos="zoom-in"
-                data-aos-duration="300" data-aos-delay="2400">
-                <a href="https://www.instagram.com/radhiansobarna_/" target="_blank" class="link-light me-4">
-                    <i class="bi bi-instagram"></i>
-                </a>
-            </h3>
-            <h2 data-bs-toggle="tooltip" data-bs-placement="top" title="YouTube" data-aos="zoom-in"
-                data-aos-duration="300" data-aos-delay="2600">
-                <a href="https://www.youtube.com/channel/UCL8YqqKOjiNtG5uC-GqyFFQ" target="_blank"
-                    class="link-light me-4"><i class="bi bi-play-btn-fill"></i></a>
-            </h2>
-            <h3 data-bs-toggle="tooltip" data-bs-placement="top" title="Github" data-aos="zoom-in"
-                data-aos-duration="300" data-aos-delay="2800">
-                <a href="https://github.com/radhiant" target="_blank" class="link-light"><i
-                        class="bi bi-github"></i></a>
-            </h3>
-        </div>
-        <a href="#" target="_blank" class="btn btn-outline-light mt-3" data-aos="zoom-in" data-aos-duration="300"
-            data-aos-delay="3000" id="linkcv"></a>
+      <img src="assets/image/rdhn.png" class="rounded-circle shadow-lg" alt="Radhian Sobarna" width="200" />
+      <h1 class="display-4 mt-2 fw-bolder">Radhian Sobarna</h1>
+      <p class="lead">&nbsp;</p>
+      <div class="d-flex justify-content-center">
+        <h3 data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="1600">
+          <a href="https://www.facebook.com/radhiantsobarna/" target="_blank" class="link-light me-4 fb">
+            <i class="bi bi-facebook"></i>
+          </a>
+        </h3>
+        <h3 data-bs-toggle="tooltip" data-bs-placement="top" title="Instagram" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="1800">
+          <a href="https://www.instagram.com/radhiansobarna_/" target="_blank" class="link-light me-4">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </h3>
+        <h2 data-bs-toggle="tooltip" data-bs-placement="top" title="YouTube" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="2000">
+          <a href="https://www.youtube.com/channel/UCL8YqqKOjiNtG5uC-GqyFFQ" target="_blank" class="link-light me-4"><i class="bi bi-play-btn-fill"></i></a>
+        </h2>
+        <h3 data-bs-toggle="tooltip" data-bs-placement="top" title="Github" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="2200">
+          <a href="https://github.com/radhiant" target="_blank" class="link-light"><i class="bi bi-github me-4"></i></a>
+        </h3>
+        <h3 data-bs-toggle="tooltip" data-bs-placement="top" title="Website" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="2400">
+          <a href="http://radhiansobarna.com" target="_blank" class="link-light"><i class="bi bi-globe"></i></a>
+        </h3>
+      </div>
+      <div class="justify-content-center">
+        <a href="#" target="_blank" class="btn btn-outline-light mt-3 me-2" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="2600" id="linkcv"></a>
+        <a href="mailto: radhiantsobarna@gmail.com" target="_blank" class="btn btn-outline-light mt-3 me-2" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="2600">
+          <i class="bi bi-envelope"></i> Email</a
+        >
+        <a href="https://wa.me/6287817379229" target="_blank" class="btn btn-outline-light mt-3" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="2600">
+          <i class="bi bi-whatsapp"></i> Whatsapp</a
+        >
+      </div>
 
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#fff" fill-opacity="1"
-                d="M0,64L60,106.7C120,149,240,235,360,245.3C480,256,600,192,720,149.3C840,107,960,85,1080,74.7C1200,64,1320,64,1380,64L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
-            </path>
-        </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#fff"
+          fill-opacity="1"
+          d="M0,64L60,106.7C120,149,240,235,360,245.3C480,256,600,192,720,149.3C840,107,960,85,1080,74.7C1200,64,1320,64,1380,64L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+        ></path>
+      </svg>
     </section>
     <!-- Akhir Jumbotron -->
 
-
     <!-- About -->
     <section id="about">
-        <div class="container">
-            <div class="row text-center mb-4">
-                <div class="col">
-                    <h2 id="headingAbout"></h2>
-                </div>
-            </div>
-            <div class="row justify-content-center fs-5 text-center">
-                <div class="col-md-4 mb-4">
-                    <p data-aos="fade-right" data-aos-duration="500" id="about1"></p>
-                </div>
-                <div class="col-md-4">
-                    <p data-aos="fade-left" data-aos-duration="500" id="about2"></p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row text-center mb-4">
+          <div class="col">
+            <h2 id="headingAbout"></h2>
+          </div>
         </div>
+        <div class="row justify-content-center fs-5 text-center">
+          <div class="col-md-4 mb-4">
+            <p data-aos="fade-right" data-aos-duration="500" id="about1"></p>
+          </div>
+          <div class="col-md-4">
+            <p data-aos="fade-left" data-aos-duration="500" id="about2"></p>
+          </div>
+        </div>
+      </div>
 
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 240">
-            <path fill="#fff" fill-opacity="1"
-                d="M0,96L60,80C120,64,240,32,360,58.7C480,85,600,171,720,213.3C840,256,960,256,1080,218.7C1200,181,1320,107,1380,69.3L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
-            </path>
-        </svg>
-
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 240">
+        <path
+          fill="#fff"
+          fill-opacity="1"
+          d="M0,96L60,80C120,64,240,32,360,58.7C480,85,600,171,720,213.3C840,256,960,256,1080,218.7C1200,181,1320,107,1380,69.3L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+        ></path>
+      </svg>
     </section>
     <!-- Akhir About -->
-
 
     <!-- Skills -->
 
     <section id="skills">
-        <div class="container">
-            <div class="row text-center mb-4">
-                <div class="col mb-3">
-                    <h2 id="headingSkill"></h2>
-                </div>
-            </div>
-            <div class="row text-center mb-4">
-                <div class="col-md-2 col-6 mb-4">
-                    <img src="assets/skills/html-5.png" alt="html" width="100%" data-aos="zoom-in"
-                        data-aos-duration="300" data-aos-delay="0">
-                </div>
-                <div class="col-md-2 col-6 mb-4">
-                    <img src="assets/skills/css.png" alt="css" width="100%" data-aos="zoom-in" data-aos-duration="300"
-                        data-aos-delay="50">
-                </div>
-                <div class="col-md-2 col-6 mb-4">
-                    <img src="assets/skills/javascript.png" alt="js" width="100%" data-aos="zoom-in"
-                        data-aos-duration="300" data-aos-delay="100">
-                </div>
-                <div class="col-md-2 col-6 mb-4">
-                    <img src="assets/skills/jquery.png" alt="html" width="100%" data-aos="zoom-in"
-                        data-aos-duration="300" data-aos-delay="150">
-                </div>
-                <div class="col-md-2 col-6 mb-4">
-                    <img src="assets/skills/php.png" alt="php" width="100%" data-aos="zoom-in" data-aos-duration="300"
-                        data-aos-delay="200">
-                </div>
-                <div class="col-md-2 col-6 mb-4">
-                    <img src="assets/skills/mysql.png" alt="mysql" width="100%" data-aos="zoom-in"
-                        data-aos-duration="300" data-aos-delay="250">
-                </div>
-                <div class="col-md-2 col-6 mb-4">
-                    <img src="assets/skills/bootstrap.png" alt="bs" width="100%" data-aos="zoom-in"
-                        data-aos-duration="300" data-aos-delay="300">
-                </div>
-                <div class="col-md-2 col-6 mb-4">
-                    <img src="assets/skills/codeigniter.png" alt="ci" width="100%" data-aos="zoom-in"
-                        data-aos-duration="300" data-aos-delay="350">
-                </div>
-                <div class="col-md-2 col-6 mb-4">
-                    <img src="assets/skills/reactjs.png" alt="ci" width="100%" data-aos="zoom-in"
-                        data-aos-duration="300" data-aos-delay="400">
-                </div>
-            </div>
+      <div class="container">
+        <div class="row text-center mb-4">
+          <div class="col mb-3">
+            <h2 id="headingSkill"></h2>
+          </div>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#0d6efd" fill-opacity="1"
-                d="M0,96L60,80C120,64,240,32,360,58.7C480,85,600,171,720,213.3C840,256,960,256,1080,218.7C1200,181,1320,107,1380,69.3L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
-            </path>
-        </svg>
+        <div class="row text-center mb-4">
+          <div class="col-md-2 col-6 mb-4">
+            <img src="assets/skills/html-5.png" alt="html" width="100%" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="0" />
+          </div>
+          <div class="col-md-2 col-6 mb-4">
+            <img src="assets/skills/css.png" alt="css" width="100%" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="50" />
+          </div>
+          <div class="col-md-2 col-6 mb-4">
+            <img src="assets/skills/javascript.png" alt="js" width="100%" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="100" />
+          </div>
+          <div class="col-md-2 col-6 mb-4">
+            <img src="assets/skills/jquery.png" alt="html" width="100%" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="150" />
+          </div>
+          <div class="col-md-2 col-6 mb-4">
+            <img src="assets/skills/php.png" alt="php" width="100%" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="200" />
+          </div>
+          <div class="col-md-2 col-6 mb-4">
+            <img src="assets/skills/mysql.png" alt="mysql" width="100%" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="250" />
+          </div>
+          <div class="col-md-2 col-6 mb-4">
+            <img src="assets/skills/bootstrap.png" alt="bs" width="100%" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="300" />
+          </div>
+          <div class="col-md-2 col-6 mb-4">
+            <img src="assets/skills/codeigniter.png" alt="ci" width="100%" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="350" />
+          </div>
+          <div class="col-md-2 col-6 mb-4">
+            <img src="assets/skills/reactjs.png" alt="ci" width="100%" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="400" />
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#0d6efd"
+          fill-opacity="1"
+          d="M0,96L60,80C120,64,240,32,360,58.7C480,85,600,171,720,213.3C840,256,960,256,1080,218.7C1200,181,1320,107,1380,69.3L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+        ></path>
+      </svg>
     </section>
 
     <!-- end Skills -->
 
     <!-- Projects -->
     <section id="projects">
-        <div class="container">
-            <div class="row text-center mb-4">
-                <div class="col-12 text-white mb-4">
-                    <h2 id="headingProject"></h2>
-                </div>
-                <div class="col-12" data-aos="zoom-in" data-aos-duration="300" data-aos-once="true">
-                    <button class="btn btn-light" id="btnAll">All</button>
-                    <button class="btn btn-outline-light" id="btnFE">Front End</button>
-                    <button class="btn btn-outline-light" id="btnBE">Back End</button>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4 mb-3 cardFE">
-                    <div class="card border-0 shadow rounded" data-aos="zoom-in" data-aos-duration="300"
-                        data-aos-once="true">
-                        <div class="card-box">
-                            <div class="text-center">
-
-                                <a href="https://radhiant.github.io/landing_page_1/" class="btn btn-dark mt-2 viewSite"
-                                    target="_blank"></a>
-                            </div>
-                        </div>
-                        <img src="assets/projects/lp1.PNG" class="card-img-top" alt="project1">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Landing Page #1
-                            </h5>
-                            <div class="d-flex mb-1">
-                                <img src="assets/skills/bs100x100.png" class="me-1" alt="bs" width="20px" height="20px">
-                                <img src="assets/skills/reactjs100x100.png" class="me-1" alt="rjs" width="20px"
-                                    height="20px">
-                            </div>
-                            <p class="card-text" id="card1"></p>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-3 cardFE">
-                    <div class="card border-0 shadow rounded" data-aos="zoom-in" data-aos-duration="300"
-                        data-aos-once="true">
-                        <div class="card-box">
-                            <div class="text-center">
-
-                                <a href="https://radhiant.github.io/landing_page_2/" class="btn btn-dark mt-2 viewSite"
-                                    target="_blank"></a>
-                            </div>
-                        </div>
-                        <img src="assets/projects/lp2.PNG" class="card-img-top" alt="project2">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Landing Page #2
-                            </h5>
-                            <div class="d-flex mb-1">
-                                <img src="assets/skills/bs100x100.png" class="me-1" alt="bs" width="20px" height="20px">
-                                <img src="assets/skills/reactjs100x100.png" class="me-1" alt="rjs" width="20px"
-                                    height="20px">
-                            </div>
-                            <p class="card-text" id="card8"></p>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-3 cardFE">
-                    <div class="card border-0 shadow rounded" data-aos="zoom-in" data-aos-duration="300"
-                        data-aos-once="true">
-                        <div class="card-box">
-                            <div class="text-center">
-
-                                <a href="https://radhiant.github.io/landing_page_3/" class="btn btn-dark mt-2 viewSite"
-                                    target="_blank"></a>
-                            </div>
-                        </div>
-                        <img src="assets/projects/lp3.PNG" class="card-img-top" alt="project3">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Landing Page #3
-                            </h5>
-                            <div class="d-flex mb-1">
-                                <img src="assets/skills/bs100x100.png" class="me-1" alt="bs" width="20px" height="20px">
-                                <img src="assets/skills/reactjs100x100.png" class="me-1" alt="rjs" width="20px"
-                                    height="20px">
-                            </div>
-                            <p class="card-text" id="card9"></p>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-3 cardBE">
-                    <div class="card border-0 shadow rounded" data-aos="zoom-in" data-aos-duration="300"
-                        data-aos-once="true">
-                        <div class="card-box">
-                            <div class="text-center">
-                                <a href="https://youtu.be/L1mIvReFlOc" target="_blank"
-                                    class="btn btn-danger viewYt"></a>
-
-                                <a href="https://github.com/radhiant/inventoryweb-ci3"
-                                    class="btn btn-dark mt-2 viewGithub" target="_blank"></a>
-                            </div>
-                        </div>
-                        <img src="assets/projects/inventoryweb.PNG" class="card-img-top" alt="project1">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Inventoryweb
-                            </h5>
-                            <div class="d-flex mb-1">
-                                <img src="assets/skills/ci100x100.png" class="me-1" alt="ci" width="20px" height="20px">
-                                <img src="assets/skills/jqy100x100.png" class="me-1" alt="jquery" width="20px"
-                                    height="20px">
-                                <img src="assets/skills/bs100x100.png" class="me-1" alt="bs" width="20px" height="20px">
-                                <img src="assets/skills/sql100x100.png" class="me-1" alt="sql" width="20px"
-                                    height="20px">
-                            </div>
-                            <p class="card-text" id="card2"></p>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-3 cardBE">
-                    <div class="card border-0 shadow rounded" data-aos="zoom-in" data-aos-duration="300"
-                        data-aos-once="true">
-                        <div class="card-box">
-                            <div class="text-center">
-                                <a href="https://youtu.be/Wsn4bbBPLVI" target="_blank"
-                                    class="btn btn-danger viewYt"></a>
-
-                                <a href="https://github.com/radhiant/perpusweb-ci3" class="btn btn-dark mt-2 viewGithub"
-                                    target="_blank"></a>
-                            </div>
-                        </div>
-                        <img src="assets/projects/perpusweb.PNG" class="card-img-top" alt="project2">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Perpusweb
-                            </h5>
-                            <div class="d-flex mb-1">
-                                <img src="assets/skills/ci100x100.png" class="me-1" alt="ci" width="20px" height="20px">
-                                <img src="assets/skills/jqy100x100.png" class="me-1" alt="jquery" width="20px"
-                                    height="20px">
-                                <img src="assets/skills/bs100x100.png" class="me-1" alt="bs" width="20px" height="20px">
-                                <img src="assets/skills/sql100x100.png" class="me-1" alt="sql" width="20px"
-                                    height="20px">
-                            </div>
-                            <p class="card-text" id="card3"></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-3 cardBE">
-                    <div class="card border-0 shadow rounded" data-aos="zoom-in" data-aos-duration="300"
-                        data-aos-once="true">
-                        <div class="card-box">
-                            <div class="text-center">
-                                <a href="https://github.com/radhiant/homestay-ci3" class="btn btn-dark mt-2 viewGithub"
-                                    target="_blank"></a>
-                            </div>
-                        </div>
-                        <img src="assets/projects/HomeStay.PNG" class="card-img-top" alt="project3">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Homestay
-                            </h5>
-                            <div class="d-flex mb-1">
-                                <img src="assets/skills/ci100x100.png" class="me-1" alt="ci" width="20px" height="20px">
-                                <img src="assets/skills/jqy100x100.png" class="me-1" alt="jquery" width="20px"
-                                    height="20px">
-                                <img src="assets/skills/bs100x100.png" class="me-1" alt="bs" width="20px" height="20px">
-                                <img src="assets/skills/sql100x100.png" class="me-1" alt="sql" width="20px"
-                                    height="20px">
-                            </div>
-                            <p class="card-text" id="card4"></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-3 cardBE">
-                    <div class="card border-0 shadow rounded" data-aos="zoom-in" data-aos-duration="300"
-                        data-aos-once="true">
-                        <div class="card-box">
-                            <div class="text-center">
-                                <button type="button" class="btn btn-dark mt-2 viewMore" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal" onclick="loadSMRreport('Summary Report')"></button>
-                            </div>
-                        </div>
-                        <img src="assets/projects/SummaryReportBKU.PNG" class="card-img-top" alt="project4">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Summary Report
-                            </h5>
-                            <div class="d-flex mb-1">
-                                <img src="assets/skills/ci100x100.png" class="me-1" alt="ci" width="20px" height="20px">
-                                <img src="assets/skills/jqy100x100.png" class="me-1" alt="jquery" width="20px"
-                                    height="20px">
-                                <img src="assets/skills/bs100x100.png" class="me-1" alt="bs" width="20px" height="20px">
-                                <img src="assets/skills/sql100x100.png" class="me-1" alt="sql" width="20px"
-                                    height="20px">
-                            </div>
-                            <p class="card-text" id="card5"></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-3 cardBE">
-                    <div class="card border-0 shadow rounded" data-aos="zoom-in" data-aos-duration="300"
-                        data-aos-once="true">
-                        <div class="card-box">
-                            <div class="text-center">
-                                <button type="button" class="btn btn-dark mt-2 viewMore" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal" onclick="loadArsipDok('Arsip Dokumen')"></button>
-                            </div>
-                        </div>
-                        <img src="assets/projects/ArsipDokumen.PNG" class="card-img-top" alt="project5">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Arsip Dokumen
-                            </h5>
-                            <div class="d-flex mb-1">
-                                <img src="assets/skills/ci100x100.png" class="me-1" alt="ci" width="20px" height="20px">
-                                <img src="assets/skills/jqy100x100.png" class="me-1" alt="jquery" width="20px"
-                                    height="20px">
-                                <img src="assets/skills/bs100x100.png" class="me-1" alt="bs" width="20px" height="20px">
-                                <img src="assets/skills/sql100x100.png" class="me-1" alt="sql" width="20px"
-                                    height="20px">
-                            </div>
-                            <p class="card-text" id="card6"></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-3 cardBE">
-                    <div class="card border-0 shadow rounded" data-aos="zoom-in" data-aos-duration="300"
-                        data-aos-once="true">
-                        <div class="card-box">
-                            <div class="text-center">
-                                <button type="button" class="btn btn-dark mt-2 viewMore" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal" onclick="loadAsetBarang('Aset Barang')"></button>
-                            </div>
-                        </div>
-                        <img src="assets/projects/AsetBarang.PNG" class="card-img-top" alt="project6">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Aset Barang
-                            </h5>
-                            <div class="d-flex mb-1">
-                                <img src="assets/skills/ci100x100.png" class="me-1" alt="ci" width="20px" height="20px">
-                                <img src="assets/skills/jqy100x100.png" class="me-1" alt="jquery" width="20px"
-                                    height="20px">
-                                <img src="assets/skills/bs100x100.png" class="me-1" alt="bs" width="20px" height="20px">
-                                <img src="assets/skills/sql100x100.png" class="me-1" alt="sql" width="20px"
-                                    height="20px">
-                            </div>
-                            <p class="card-text" id="card7"></p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
+      <div class="container">
+        <div class="row text-center mb-4">
+          <div class="col-12 text-white mb-4">
+            <h2 id="headingProject"></h2>
+          </div>
+          <div class="col-12" data-aos="zoom-in" data-aos-duration="300" data-aos-once="true">
+            <button class="btn btn-light" id="btnAll">All</button>
+            <button class="btn btn-outline-light" id="btnFE">Front End</button>
+            <button class="btn btn-outline-light" id="btnBE">Back End</button>
+          </div>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#fff" fill-opacity="1"
-                d="M0,192L60,202.7C120,213,240,235,360,250.7C480,267,600,277,720,256C840,235,960,181,1080,160C1200,139,1320,149,1380,154.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
-            </path>
-        </svg>
+
+        <div class="row">
+          <div class="col-md-4 mb-3 cardFE">
+            <div class="card border-0 shadow rounded" data-aos="zoom-in" data-aos-duration="300" data-aos-once="true">
+              <div class="card-box">
+                <div class="text-center">
+                  <a href="https://radhiant.github.io/landing_page_1/" class="btn btn-dark mt-2 viewSite" target="_blank"></a>
+                </div>
+              </div>
+              <img src="assets/projects/lp1.PNG" class="card-img-top" alt="project1" />
+              <div class="card-body">
+                <h5 class="card-title">Landing Page #1</h5>
+                <div class="d-flex mb-1">
+                  <img src="assets/skills/bs100x100.png" class="me-1" alt="bs" width="20px" height="20px" />
+                  <img src="assets/skills/reactjs100x100.png" class="me-1" alt="rjs" width="20px" height="20px" />
+                </div>
+                <p class="card-text" id="card1"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 cardFE">
+            <div class="card border-0 shadow rounded" data-aos="zoom-in" data-aos-duration="300" data-aos-once="true">
+              <div class="card-box">
+                <div class="text-center">
+                  <a href="https://radhiant.github.io/landing_page_2/" class="btn btn-dark mt-2 viewSite" target="_blank"></a>
+                </div>
+              </div>
+              <img src="assets/projects/lp2.PNG" class="card-img-top" alt="project2" />
+              <div class="card-body">
+                <h5 class="card-title">Landing Page #2</h5>
+                <div class="d-flex mb-1">
+                  <img src="assets/skills/bs100x100.png" class="me-1" alt="bs" width="20px" height="20px" />
+                  <img src="assets/skills/reactjs100x100.png" class="me-1" alt="rjs" width="20px" height="20px" />
+                </div>
+                <p class="card-text" id="card8"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 cardFE">
+            <div class="card border-0 shadow rounded" data-aos="zoom-in" data-aos-duration="300" data-aos-once="true">
+              <div class="card-box">
+                <div class="text-center">
+                  <a href="https://radhiant.github.io/landing_page_3/" class="btn btn-dark mt-2 viewSite" target="_blank"></a>
+                </div>
+              </div>
+              <img src="assets/projects/lp3.PNG" class="card-img-top" alt="project3" />
+              <div class="card-body">
+                <h5 class="card-title">Landing Page #3</h5>
+                <div class="d-flex mb-1">
+                  <img src="assets/skills/bs100x100.png" class="me-1" alt="bs" width="20px" height="20px" />
+                  <img src="assets/skills/reactjs100x100.png" class="me-1" alt="rjs" width="20px" height="20px" />
+                </div>
+                <p class="card-text" id="card9"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 cardBE">
+            <div class="card border-0 shadow rounded" data-aos="zoom-in" data-aos-duration="300" data-aos-once="true">
+              <div class="card-box">
+                <div class="text-center">
+                  <a href="https://youtu.be/L1mIvReFlOc" target="_blank" class="btn btn-danger viewYt"></a>
+
+                  <a href="https://github.com/radhiant/inventoryweb-ci3" class="btn btn-dark mt-2 viewGithub" target="_blank"></a>
+                </div>
+              </div>
+              <img src="assets/projects/inventoryweb.PNG" class="card-img-top" alt="project1" />
+              <div class="card-body">
+                <h5 class="card-title">Inventoryweb</h5>
+                <div class="d-flex mb-1">
+                  <img src="assets/skills/ci100x100.png" class="me-1" alt="ci" width="20px" height="20px" />
+                  <img src="assets/skills/jqy100x100.png" class="me-1" alt="jquery" width="20px" height="20px" />
+                  <img src="assets/skills/bs100x100.png" class="me-1" alt="bs" width="20px" height="20px" />
+                  <img src="assets/skills/sql100x100.png" class="me-1" alt="sql" width="20px" height="20px" />
+                </div>
+                <p class="card-text" id="card2"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 cardBE">
+            <div class="card border-0 shadow rounded" data-aos="zoom-in" data-aos-duration="300" data-aos-once="true">
+              <div class="card-box">
+                <div class="text-center">
+                  <a href="https://youtu.be/Wsn4bbBPLVI" target="_blank" class="btn btn-danger viewYt"></a>
+
+                  <a href="https://github.com/radhiant/perpusweb-ci3" class="btn btn-dark mt-2 viewGithub" target="_blank"></a>
+                </div>
+              </div>
+              <img src="assets/projects/perpusweb.PNG" class="card-img-top" alt="project2" />
+              <div class="card-body">
+                <h5 class="card-title">Perpusweb</h5>
+                <div class="d-flex mb-1">
+                  <img src="assets/skills/ci100x100.png" class="me-1" alt="ci" width="20px" height="20px" />
+                  <img src="assets/skills/jqy100x100.png" class="me-1" alt="jquery" width="20px" height="20px" />
+                  <img src="assets/skills/bs100x100.png" class="me-1" alt="bs" width="20px" height="20px" />
+                  <img src="assets/skills/sql100x100.png" class="me-1" alt="sql" width="20px" height="20px" />
+                </div>
+                <p class="card-text" id="card3"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 cardBE">
+            <div class="card border-0 shadow rounded" data-aos="zoom-in" data-aos-duration="300" data-aos-once="true">
+              <div class="card-box">
+                <div class="text-center">
+                  <a href="https://github.com/radhiant/homestay-ci3" class="btn btn-dark mt-2 viewGithub" target="_blank"></a>
+                </div>
+              </div>
+              <img src="assets/projects/HomeStay.PNG" class="card-img-top" alt="project3" />
+              <div class="card-body">
+                <h5 class="card-title">Homestay</h5>
+                <div class="d-flex mb-1">
+                  <img src="assets/skills/ci100x100.png" class="me-1" alt="ci" width="20px" height="20px" />
+                  <img src="assets/skills/jqy100x100.png" class="me-1" alt="jquery" width="20px" height="20px" />
+                  <img src="assets/skills/bs100x100.png" class="me-1" alt="bs" width="20px" height="20px" />
+                  <img src="assets/skills/sql100x100.png" class="me-1" alt="sql" width="20px" height="20px" />
+                </div>
+                <p class="card-text" id="card4"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 cardBE">
+            <div class="card border-0 shadow rounded" data-aos="zoom-in" data-aos-duration="300" data-aos-once="true">
+              <div class="card-box">
+                <div class="text-center">
+                  <button type="button" class="btn btn-dark mt-2 viewMore" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="loadSMRreport('Summary Report')"></button>
+                </div>
+              </div>
+              <img src="assets/projects/SummaryReportBKU.PNG" class="card-img-top" alt="project4" />
+              <div class="card-body">
+                <h5 class="card-title">Summary Report</h5>
+                <div class="d-flex mb-1">
+                  <img src="assets/skills/ci100x100.png" class="me-1" alt="ci" width="20px" height="20px" />
+                  <img src="assets/skills/jqy100x100.png" class="me-1" alt="jquery" width="20px" height="20px" />
+                  <img src="assets/skills/bs100x100.png" class="me-1" alt="bs" width="20px" height="20px" />
+                  <img src="assets/skills/sql100x100.png" class="me-1" alt="sql" width="20px" height="20px" />
+                </div>
+                <p class="card-text" id="card5"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 cardBE">
+            <div class="card border-0 shadow rounded" data-aos="zoom-in" data-aos-duration="300" data-aos-once="true">
+              <div class="card-box">
+                <div class="text-center">
+                  <button type="button" class="btn btn-dark mt-2 viewMore" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="loadArsipDok('Arsip Dokumen')"></button>
+                </div>
+              </div>
+              <img src="assets/projects/ArsipDokumen.PNG" class="card-img-top" alt="project5" />
+              <div class="card-body">
+                <h5 class="card-title">Arsip Dokumen</h5>
+                <div class="d-flex mb-1">
+                  <img src="assets/skills/ci100x100.png" class="me-1" alt="ci" width="20px" height="20px" />
+                  <img src="assets/skills/jqy100x100.png" class="me-1" alt="jquery" width="20px" height="20px" />
+                  <img src="assets/skills/bs100x100.png" class="me-1" alt="bs" width="20px" height="20px" />
+                  <img src="assets/skills/sql100x100.png" class="me-1" alt="sql" width="20px" height="20px" />
+                </div>
+                <p class="card-text" id="card6"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 cardBE">
+            <div class="card border-0 shadow rounded" data-aos="zoom-in" data-aos-duration="300" data-aos-once="true">
+              <div class="card-box">
+                <div class="text-center">
+                  <button type="button" class="btn btn-dark mt-2 viewMore" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="loadAsetBarang('Aset Barang')"></button>
+                </div>
+              </div>
+              <img src="assets/projects/AsetBarang.PNG" class="card-img-top" alt="project6" />
+              <div class="card-body">
+                <h5 class="card-title">Aset Barang</h5>
+                <div class="d-flex mb-1">
+                  <img src="assets/skills/ci100x100.png" class="me-1" alt="ci" width="20px" height="20px" />
+                  <img src="assets/skills/jqy100x100.png" class="me-1" alt="jquery" width="20px" height="20px" />
+                  <img src="assets/skills/bs100x100.png" class="me-1" alt="bs" width="20px" height="20px" />
+                  <img src="assets/skills/sql100x100.png" class="me-1" alt="sql" width="20px" height="20px" />
+                </div>
+                <p class="card-text" id="card7"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#fff"
+          fill-opacity="1"
+          d="M0,192L60,202.7C120,213,240,235,360,250.7C480,267,600,277,720,256C840,235,960,181,1080,160C1200,139,1320,149,1380,154.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+        ></path>
+      </svg>
     </section>
     <!-- Akhir Projects -->
 
-
-
-
     <!-- contact -->
     <section id="contact">
-        <div class="container">
-            <div class="row text-center mb-4">
-                <div class="col">
-                    <h2 id="headingContact"></h2>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="alert alert-success alert-submited alert-dismissible fade show d-none"
-                        id="succesMessage" role="alert">
-                        <strong>Thank you!</strong> We have received your message.
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                    <div class="alert alert-danger alert-fail alert-dismissible fade show d-none" id="failMessage"
-                        role="alert">
-                        <strong>Ups!</strong> We cannot accept your message.
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                    <form name="radhian-contact-form">
-                        <div class="mb-3" data-aos="zoom-in-up" data-aos-duration="300">
-                            <label for="name" class="form-label" id="formName"><i class="bi bi-person-fill"></i> Full
-                                Name</label>
-                            <input type="text" class="form-control" id="name" aria-describedby="name" name="nama"
-                                required>
-                        </div>
-                        <div class="mb-3" data-aos="zoom-in-up" data-aos-duration="300" data-aos-delay="350">
-                            <label for="email" class="form-label" id="formEmail"><i class="bi bi-envelope-fill"></i>
-                                Email</label>
-                            <input type="email" class="form-control" id="email" aria-describedby="email" name="email"
-                                required>
-                        </div>
-                        <div class="mb-3" data-aos="zoom-in-up" data-aos-duration="300" data-aos-delay="400">
-                            <label for="pesan" class="form-label" id="formMessage"><i class="bi bi-chat-dots-fill"></i>
-                                Message</label>
-                            <textarea class="form-control" id="pesan" rows="3" name="pesan" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-success btn-kirim mb-3" data-aos="zoom-in-up"
-                            data-aos-duration="300" data-aos-delay="450" id="btnSubmit"></button>
-                        <button class="btn btn-success btn-loading d-none mb-3" data-aos="zoom-in-up"
-                            data-aos-duration="300" data-aos-delay="450" type="button" disabled id="btnLoding">
-                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                            Loading...
-                        </button>
-                    </form>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row text-center mb-4">
+          <div class="col">
+            <h2 id="headingContact"></h2>
+          </div>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#0d6efd" fill-opacity="1"
-                d="M0,224L60,208C120,192,240,160,360,176C480,192,600,256,720,266.7C840,277,960,235,1080,229.3C1200,224,1320,256,1380,272L1440,288L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
-            </path>
-        </svg>
+
+        <div class="row justify-content-center mb-5">
+          <div class="col-12 text-center mb-4">
+            <a href="https://wa.me/6287817379229" target="_bank" class="btn btn-lg btn-outline-dark me-4"> <i class="bi bi-whatsapp"></i> Whatsapp</a>
+            <a href="mailto: radhiantsobarna@gmail.com" target="_blank" class="btn btn-lg btn-outline-dark"> <i class="bi bi-envelope"></i> Email</a>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#0d6efd"
+          fill-opacity="1"
+          d="M0,224L60,208C120,192,240,160,360,176C480,192,600,256,720,266.7C840,277,960,235,1080,229.3C1200,224,1320,256,1380,272L1440,288L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+        ></path>
+      </svg>
     </section>
     <!-- akhir contact -->
 
     <!-- Footer -->
     <footer class="bg-primary text-white text-center pb-3" id="footerText">
-        <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://github.com/radhiant"
-                class="text-white fw-bold" target="_blank" rel="noopener noreferrer">Radhian Sobarna</a></p>
+      <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://github.com/radhiant" class="text-white fw-bold" target="_blank" rel="noopener noreferrer">Radhian Sobarna</a></p>
     </footer>
     <!-- Akhir Footer -->
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="closeContent()"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div id="contentMore"></div>
-                </div>
-            </div>
+    <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="closeContent()" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div id="contentMore"></div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- End Modal -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
@@ -586,6 +481,5 @@
     <script src="assets/js/leanguage.js"></script>
     <script src="assets/js/navbar.js"></script>
     <script src="assets/js/loadcontent.js"></script>
-</body>
-
+  </body>
 </html>
