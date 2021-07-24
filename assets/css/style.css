@@ -33,7 +33,7 @@ section {
   bottom: 128px;
 }
 
-.btn-leanguage{
+.btn-leanguage {
   z-index: 9999;
   position: fixed;
   right: 32px;
@@ -48,7 +48,7 @@ section {
 }
 
 .dropdown-toggle::after {
-    display:none;
+  display: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -57,7 +57,7 @@ section {
     bottom: 112px;
   }
 
-  .btn-leanguage{
+  .btn-leanguage {
     right: 16px;
     bottom: 64px;
   }
@@ -68,7 +68,7 @@ section {
   }
 }
 
-.card-box{
+.card-box {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -78,28 +78,31 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
-
-.card-box a{
+.card-box a {
   display: none;
   transition: 300ms;
 }
 
-.card-box button{
+.card-box button {
   display: none;
   transition: 300ms;
 }
 
-.card-box:hover{
+.card-box:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.card-box:hover a{
+.card-box:hover a {
   display: block;
 }
 
-.card-box:hover button{
+.card-box:hover button {
   display: block;
+}
+
+.bg-svg {
+  height: 100px;
+  width: 100%;
 }
